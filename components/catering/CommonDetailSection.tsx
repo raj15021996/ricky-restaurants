@@ -56,12 +56,19 @@ export default function CommonDetailSection({commonData}: any) {
             <h2 className={styles.title}>{title}</h2>
             
             <div className={styles.sideBenefits}>
-            <p className={styles.intro}>{intro}</p>
+              {
+                intro?.map((paragraph:any, index:number) => (
+                  <p key={index} className={styles.intro}>{paragraph}</p>
+                ))
+              }
 
             {sideBenefits && sideBenefits.map((benefit:any, index:number) => (
               <div key={index} className={styles.sideBenefitBlock}>
                 <h3 className={styles.benefitTitle}>{benefit.title}</h3>
-                <p className={styles.benefitText}>{benefit.description}</p>
+                { benefit?.description?.map((paragraph:any, index:number) => (
+                  <p key={index} className={styles.benefitText}>{paragraph}</p>
+                ))
+                  }
               </div>
             ))}
             </div>
@@ -73,7 +80,11 @@ export default function CommonDetailSection({commonData}: any) {
           {fullWidthBlocks && fullWidthBlocks.map((block:any, index:number) => (
             <div key={index} className={styles.fullWidthBlock}>
               <h3 className={styles.fullWidthTitle}>{block.title}</h3>
-              <p className={styles.fullWidthText}>{block.description}</p>
+             {
+               block?.description?.map((paragraph:any, index:number) => (
+                 <p key={index} className={styles.fullWidthText}>{paragraph}</p>
+               ))
+             }
             </div>
           ))}
 

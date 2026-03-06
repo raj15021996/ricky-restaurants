@@ -1,6 +1,6 @@
 import CateringComponent from '@/components/catering';
-import { cateringDataforWedding, weddingData } from '@/utils/constant';
+import { specialCateringSection, specialData } from '@/utils/constant';
 
-const WeddingPage = () => <CateringComponent data={weddingData} cateringData={cateringDataforWedding} />;
+const SpecialPage = () => <CateringComponent data={specialData} commonData={specialCateringSection} />;
 
-export default WeddingPage;
+export default SpecialPage;

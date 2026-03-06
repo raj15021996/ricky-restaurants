@@ -1,6 +1,6 @@
 import CateringComponent from '@/components/catering';
-import { cateringDataforWedding, weddingData } from '@/utils/constant';
+import { KidsCateringSection, kidsData } from '@/utils/constant';
 
-const WeddingPage = () => <CateringComponent data={weddingData} cateringData={cateringDataforWedding} />;
+const KidsPage = () => <CateringComponent data={kidsData} commonData={KidsCateringSection} />;
 
-export default WeddingPage;
+export default KidsPage;

@@ -1,6 +1,6 @@
 import CateringComponent from '@/components/catering';
-import { cateringDataforWedding, weddingData } from '@/utils/constant';
+import { getTogetherCateringSection, getTogetherData } from '@/utils/constant';
 
-const WeddingPage = () => <CateringComponent data={weddingData} cateringData={cateringDataforWedding} commonData={null} />;
+const GetTogetherPage = () => <CateringComponent data={getTogetherData} commonData={getTogetherCateringSection} />;
 
-export default WeddingPage;
+export default GetTogetherPage;
