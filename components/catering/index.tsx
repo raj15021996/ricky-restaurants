@@ -17,7 +17,7 @@ function index({ data, cateringData, commonData }: any) {
             <CateringComponent data={data} />
             {
                 path.includes('birthday') ? <BirthdayCateringSection /> : (path.includes('wedding') || path.includes('business')) ? <CateringDetails cateringData={cateringData} /> :
-                <CommonDetailSection commonData={commonData} />
+                (commonData ? <CommonDetailSection commonData={commonData} />: null)
             }
 
             <Footer />
