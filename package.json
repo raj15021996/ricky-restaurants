@@ -1,11 +1,11 @@
 {
-  "name": "catering-website",
+  "name": "ricky-restaurants",
   "version": "0.1.0",
   "private": true,
   "author": "Raj Kumar",
   "repository": {
     "type": "git",
-    "url": "https://github.com/raj15021996/catering-website.git"
+    "url": "https://github.com/raj15021996/ricky-restaurants"
   },
   "scripts": {
     "dev": "next dev",
