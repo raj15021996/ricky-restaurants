@@ -1,0 +1,103 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #0E0707;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(70, 54, 54);
+  opacity: 0.5;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  min-height: 95vh;
+  max-width: 1140px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+    font-family: "Playfair Display", Sans-serif;
+    font-size: 45px;
+    font-weight: normal;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+.subtitle {
+    font-family: "Playfair Display", Sans-serif;
+    font-size: 72px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+.button {
+  display: inline-block;
+  background-color: #b68d40;
+  color: white;
+  padding: 12px 32px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #a67a2f;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    height: 300px;
+    margin-top: 70px;
+  }
+
+  .title {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+
+  .button {
+    padding: 10px 24px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 250px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+}

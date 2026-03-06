@@ -1,0 +1,144 @@
+.menuHero {
+  background-color: #C19855;
+  background-image: url("https://rickyrestaurants.com/wp-content/uploads/2024/05/contact-bg-img.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-color 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 60px 0px 60px 0px;
+  position: relative;
+}
+
+.content {
+  font-family: "Poppins", Sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 1.4em;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.content h1 {
+  font-family: "Poppins", Sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 1.4em;
+  color: #FFFFFF;
+}
+
+.menuOverlay {
+  background-color: #C19855;
+  opacity: 0.8;
+  transition: background-color 0.3s, border 0.3s, border-radius 0.3s, opacity 0.3s;
+  inset: 0;
+  position: absolute;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.menuSection {
+  background-image: url("https://rickyrestaurants.com/wp-content/uploads/2024/05/hm-bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 130px 0px 130px 0px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.menuSection:nth-child(odd) {
+  background-color: #f8f6f2;
+}
+
+.menuSection h2 {
+  text-align: center;
+  font-family: "Playfair Display", Sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #2D2D2D;
+}
+
+.menuGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.reservationForm {
+  background-color: #CCC7C7;
+  background-image: url("https://rickyrestaurants.com/wp-content/uploads/2024/05/catering-3.png");
+  background-position: center center;
+  position: relative;
+}
+
+.reservationOverlay {
+  background-color: #CCC7C7;
+  opacity: 0.8;
+  transition: background-color 0.3s, border 0.3s, border-radius 0.3s, opacity 0.3s;
+  inset: 0;
+  position: absolute;
+}
+
+.reservationContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.formHeader {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF1F1;
+  h1{
+    font-family: "Playfair Display", Sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #2D2D2D;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menuSection {
+    padding: 40px 20px;
+  }
+
+  .menuSection h2 {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  .menuGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menuSection {
+    padding: 30px 15px;
+  }
+
+  .menuSection h2 {
+    font-size: 20px;
+  }
+
+  .menuGrid {
+    gap: 16px;
+  }
+}

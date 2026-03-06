@@ -1,0 +1,497 @@
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  height: auto;
+  max-width: 100%;
+}
+
+.logo .logoImg {
+  width: 18.70rem;
+  height: auto;
+}
+
+.logoText {
+  font-size: 16px;
+  font-weight: 700;
+  color: #b68d40;
+  letter-spacing: 2px;
+  font-family: 'Playfair Display', serif;
+}
+
+.logoSubtext {
+  font-size: 12px;
+  color: #888;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  padding: 10px;
+}
+
+.navContainer {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Arial", Sans-serif;
+  position: relative;
+  padding: 25px 20px;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+}
+
+.navLink:hover {
+  color: #b68d40;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.reservationBtn {
+  background-color: #b68d40;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.reservationBtn:hover {
+  background-color: #a67a2f;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* ─────────────────────────────────────────
+   DROPDOWN BASE
+───────────────────────────────────────── */
+.dropdownWrapper {
+  position: relative;
+}
+
+/* Remove Bootstrap default caret */
+.dropdownToggle::after {
+  display: none !important;
+}
+
+.dropdownToggle {
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Arial", Sans-serif;
+  padding: 25px 20px;
+}
+
+/* Show custom down arrow */
+.dropdownToggle::after {
+  display: inline-block !important;
+  margin-left: 6px;
+  vertical-align: middle;
+  border: none;
+  transition: border-color 0.3s ease;
+}
+
+.dropdownToggle:hover {
+  color: #b68d40;
+}
+
+.dropdownToggle:hover::after {
+  border-top-color: #b68d40;
+}
+
+/* Top-level dropdown panel */
+.dropdownMenu {
+  background-color: #ffffff;
+  border: 1px solid #e0dcd4;
+  border-radius: 0 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  padding: 0 !important;
+  min-width: 210px;
+  margin-top: 0 !important;
+}
+
+/* Top-level dropdown items */
+.dropdownItem {
+  display: block;
+  padding: 11px 16px;
+  color: #333;
+  font-family: "Arial", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid #f0ece4;
+}
+
+.dropdownItem:last-child {
+  border-bottom: none;
+}
+
+.dropdownItem:hover,
+.dropdownItem:focus {
+  color: #b68d40;
+  background-color: #f8f5f0;
+}
+
+/* ─────────────────────────────────────────
+   NESTED SUBMENU (dark trigger rows)
+───────────────────────────────────────── */
+.nestedDropdownWrapper {
+  position: relative;
+}
+
+/* ── NESTED TOGGLE — light by default, dark on hover ── */
+.nestedToggle {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  background-color: #ffffff !important;   /* light by default */
+  color: #333 !important;
+  padding: 11px 16px !important;
+  margin: 0 !important;
+  border-bottom: 1px solid #f0ece4 !important;
+  border-radius: 0 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  transition: background-color 0.2s ease, color 0.2s ease !important;
+}
+
+.nestedToggle:hover {
+  background-color: #2e3444 !important;   /* dark only on hover */
+  color: #ffffff !important;
+}
+
+.nestedToggle:hover .nestedArrow {
+  color: #ffffff;
+}
+
+/* Arrow color matches text state */
+.nestedArrow {
+  font-size: 10px;
+  color: #333;                             /* dark by default */
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+/* ── FLYOUT PANEL — flush against parent, no gap ── */
+.nestedDropdownMenu {
+  top: 0 !important;
+  left: 100% !important;
+  margin-top: 0 !important;
+  margin-left: 0 !important;              /* removed the 2px gap */
+  transform: translateX(0) !important;
+  background-color: #ffffff !important;
+  border: 1px solid #e0dcd4 !important;
+  border-radius: 0 !important;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.15) !important;
+  min-width: 230px !important;
+  padding: 0 !important;
+}
+/* Items inside flyout */
+.nestedDropdownMenu .dropdownItem {
+  padding: 12px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #444;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f0ece4;
+}
+
+.nestedDropdownMenu .dropdownItem:last-child {
+  border-bottom: none;
+}
+
+.nestedDropdownMenu .dropdownItem:hover {
+  color: #ffffff;
+  background-color: #2e3444;
+}
+
+/* "GET TOGETHER" last item - dark bg like image */
+.getTogetherItem {
+  background-color: #2e3444 !important;
+  color: #ffffff !important;
+  border-bottom: none !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+.getTogetherItem:hover {
+  background-color: #3a4055 !important;
+  color: #ffffff !important;
+}
+
+/* ─────────────────────────────────────────
+   CLOSE BUTTON (mobile only)
+───────────────────────────────────────── */
+.navCloseBtn {
+  display: none;
+}
+
+/* ─────────────────────────────────────────
+   MOBILE
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo .logoImg {
+    width: 20.70rem;
+  }
+
+  .hamburger {
+    display: flex;
+    order: 2;
+    padding: 10px;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #f8f6f2;
+    flex-direction: column;
+    gap: 0;
+    padding: 20px;
+    border-bottom: 1px solid #e0dcd4;
+  }
+
+  .navOpen {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .navCloseBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    z-index: 10;
+  }
+
+  .navCloseBtn:hover {
+    color: #b68d40;
+    background-color: #e0dcd4;
+  }
+
+  .navLink {
+    padding: 12px 0;
+    border-bottom: 1px solid #e0dcd4;
+    width: 100%;
+  }
+
+  .dropdownWrapper {
+    padding: 12px 0 !important;
+    width: 100%;
+  }
+
+  .dropdownToggle {
+    padding: 12px 0;
+  }
+
+  .navContainer {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px 10px;
+    gap: 30px;
+  }
+
+  .reservationBtn {
+    order: 3;
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+
+  /* ── Mobile Accordion ── */
+  .accordionWrapper {
+    width: 100%;
+    border-bottom: 1px solid #e0dcd4;
+  }
+
+  .accordionToggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 12px 0;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Arial", sans-serif;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .accordionToggle:hover {
+    color: #b68d40;
+  }
+
+  .accordionArrow {
+    font-size: 18px;
+    color: #b68d40;
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+
+  .accordionArrowOpen {
+    transform: rotate(180deg);
+  }
+
+  .accordionBody {
+    display: flex;
+    flex-direction: column;
+    padding: 4px 0 8px 12px;
+    background-color: #f0ece4;
+    border-radius: 4px;
+    margin-bottom: 4px;
+  }
+
+  .accordionItem {
+    display: block;
+    padding: 9px 12px;
+    color: #333;
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .accordionItem:hover {
+    color: #b68d40;
+  }
+
+  /* Nested toggles inside accordion */
+  /* Nested toggles inside accordion */
+.accordionNestedToggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #ffffff;        /* light by default */
+  color: #333;
+  border: none;
+  border-top: 1px solid #e0dcd4;
+  border-bottom: 1px solid #e0dcd4;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: left;
+  margin: 2px 0;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.accordionNestedToggle:hover {
+  background-color: #2e3444;        /* dark only on hover */
+  color: #ffffff;
+}
+
+/* Arrow inherits color change on hover */
+.accordionNestedToggle:hover .accordionArrow {
+  color: #ffffff;
+}
+
+.accordionNestedToggle .accordionArrow {
+  color: #b68d40;                   /* gold by default */
+  transition: color 0.2s ease;
+}
+}

@@ -1,0 +1,491 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* About Preview Section */
+.aboutPreview {
+  background-image: url("https://rickyrestaurants.com/wp-content/uploads/2024/05/about-bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 130px 0px 130px 0px;
+  transition: border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.aboutGrid {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+/* ── Left images ── */
+.aboutImages {
+  position: relative;
+  display: flex;
+  gap: 0;
+  min-height: 570px;
+  width: 50%;
+}
+
+.imgContainer1 {
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  width: 50%;
+  padding: 10px;
+}
+
+.imgContainer2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  width: 50%;
+  padding: 10px;
+}
+
+.imgTop {
+  height: auto;
+  max-width: 100%;
+  border-style: solid;
+  border-width: 0px 0px 0px 0px;
+  border-radius: 8px 8px 8px 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 2;
+  margin-left: 0;
+}
+
+.imgBottom {
+  height: auto;
+  max-width: 100%;
+  border-style: solid;
+  border-width: 0px 0px 0px 0px;
+  border-radius: 8px 8px 8px 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 2;
+  margin-left: 0;
+}
+
+/* ── Right content ── */
+.label {
+  font-family: "Poppins", Sans-serif !important;
+  font-size: 25px !important;
+  font-weight: 500 !important;
+  color: #C19855 !important;
+}
+
+.aboutContent {
+  width: 50%;
+}
+
+.aboutSubContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 570px;
+}
+
+.aboutContent h2 {
+  font-family: "Playfair Display", Sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #2D2D2D;
+}
+
+.aboutContent p {
+  color: #848484;
+  line-height: 1.9;
+  margin-bottom: 24px;
+}
+
+.exploreBtn {
+  background-color: #b68d40;
+  color: white;
+  border: none;
+  padding: 13px 34px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.exploreBtn:hover {
+  background-color: #a67a2f;
+}
+
+/* ── Two small images below button ── */
+.smallImages {
+  display: flex;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.smallImg {
+  width: calc(30% - 8px);
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .aboutGrid {
+    display: block !important;
+  }
+
+  .aboutImages {
+    min-height: 380px;
+    width: 100%;
+
+    .imgContainer1,
+    .imgContainer2 {
+      width: 100%;
+      padding: 5px;
+      display: block;
+    }
+
+    .imgTop {
+      width: 100%;
+    }
+
+    .imgBottom {
+      width: 100%;
+    }
+  }
+
+  .aboutContent {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .smallImages {
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+
+  .aboutImages {
+    flex-wrap: wrap;
+  }
+
+  .imgTop {
+    width: 60%;
+  }
+
+  .imgBottom {
+    width: 60%;
+  }
+
+  .aboutContent h2 {
+    font-size: 28px;
+  }
+
+  .smallImages {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .exploreBtn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutImages {
+    min-height: 300px;
+  }
+
+  .imgTop,
+  .imgBottom {
+    width: 70%;
+  }
+
+  .aboutContent h2 {
+    font-size: 24px;
+  }
+
+  .smallImg {
+    width: calc(50% - 5px);
+  }
+}
+
+/* Catering Preview Section */
+.cateringPreview {
+  background-color: var(--e-global-color-primary);
+  background-image: url("https://rickyrestaurants.com/wp-content/uploads/2024/05/event-detail-img.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: "Poppins", Sans-serif;
+  position: relative;
+}
+
+.cateringOverlay {
+  inset: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFFFFF;
+  opacity: 0.95;
+}
+
+.cateringContainer {
+  position: relative;
+  z-index: 1;
+}
+
+.cateringPreview h4 {
+  font-family: "Arial", Sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #C19855;
+}
+
+.description {
+  font-size: 19px;
+  font-weight: 200 !important;
+  color: #334155d0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+  font-family: "Poppins", Sans-serif;
+  text-align: center;
+  margin-bottom: 1.75em;
+}
+
+.cateringGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Menu Preview Section */
+.menuPreview {
+  background-image: url("https://rickyrestaurants.com/wp-content/uploads/2024/05/hm-bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 130px 0px 130px 0px;
+  text-align: center;
+  font-family: "Poppins", Sans-serif;
+  position: relative;
+}
+
+.menuPreview h2 {
+  font-family: "Playfair Display", Sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #2D2D2D;
+}
+
+.menuGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.moreMenuBtn {
+  text-align: center;
+}
+
+.primaryBtn {
+  background-color: #C19855;
+  font-family: "Poppins", Sans-serif;
+  font-size: 29px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 25px 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  border: none;
+  line-height: 1em;
+}
+
+.primaryBtn:hover {
+  background-color: #a67a2f;
+}
+
+/* Delivery CTA Section */
+.deliveryCta {
+  background-image: url("https://rickyrestaurants.com/wp-content/uploads/2024/05/sub-bg.png");
+  background-position: center center;
+  background-size: cover;
+  transition: background-color 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 130px 0px 130px 0px;
+}
+
+.deliveryGrid {
+  display: flex;
+  width: 100%;
+  ;
+}
+
+.deliveryContent {
+  background-color: #ffffff;
+  box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 40px;
+  border-radius: 10px 0px 0px 10px;
+  width: 50%;
+}
+
+.deliveryContent h3 {
+  font-family: "Poppins", Sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  color: #C19855;
+  line-height: 1.3em;
+  margin: 0;
+}
+
+.deliveryContent h4 {
+  font-family: "Playfair Display", Sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #2D2D2D;
+  line-height: 1.2em;
+  padding: 40px 0;
+}
+
+.deliveryContent p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.ctaBtn {
+  background-color: #b68d40;
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ctaBtn:hover {
+  background-color: #a67a2f;
+}
+
+.deliveryImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  width: 50%;
+  transition: background-color .3s, border .3s, border-radius .3s, box-shadow .3s, transform var(--e-transform-transition-duration, .4s);
+}
+
+.deliveryImage img {
+  border-radius: 10px 10px 10px 10px;
+  border: none;
+  box-shadow: none;
+  height: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .deliveryGrid {
+    display: block;
+    width: 100%;
+  }
+
+  .deliveryContent,
+  .deliveryImage {
+    text-align: center;
+    width: 100%;
+  }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .aboutPreview,
+  .cateringPreview,
+  .menuPreview,
+  .deliveryCta {
+    padding: 40px 20px;
+  }
+
+  .aboutGrid {
+    display: block;
+    width: 100%;
+  }
+
+  .deliveryGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cateringGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .aboutContent h2,
+  .cateringPreview h2,
+  .menuPreview h2,
+  .deliveryContent h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .aboutPreview,
+  .cateringPreview,
+  .menuPreview,
+  .deliveryCta {
+    padding: 30px 15px;
+  }
+
+  .cateringGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutContent h2,
+  .cateringPreview h2,
+  .menuPreview h2,
+  .deliveryContent h3 {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .aboutContent p,
+  .deliveryContent p {
+    font-size: 13px;
+  }
+}
